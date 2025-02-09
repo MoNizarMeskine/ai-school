@@ -3,7 +3,7 @@ import '../styles.css';
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-10 mx-7 mb-5 justify-center items-center transparent-bg">
+    <div className="flex flex-col gap-10 mx-7 mb-5 mt-10 justify-center items-center transparent-bg">
       <h1 className="text-3xl font-bold">The Team</h1>
 
       <div className="w-full md:w-auto md:mt-5 mb-5">
