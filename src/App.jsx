@@ -1,27 +1,45 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
 import Navbar from "./parts/Navbar";
 import Contactbar from "./parts/Contactbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import SpecialPage from "./pages/SpecialPage"; // Import the new page
 import Classes from "./pages/Classes";
+import Signup from "./pages/Signup";
+import Chatbot from './pages/Chatbot';
 
-const yeye = true; // Define the boolean value
 
 const App = () => {
   return (
     <main>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/classes" element={<Classes />} />
-          {yeye && <Route path="/special" element={<SpecialPage />} />} {/* Conditionally render the route */}
-        </Routes>
-        <Contactbar />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/classes" element={<Classes />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/special" element={<SpecialPage />} />
+            <Route path="/chatbot" element={<Chatbot />} />
+
+          </Routes>
+        </Layout>
       </Router>
     </main>
+  );
+};
+
+const Layout = ({ children }) => {
+  const location = useLocation(); // Get the current route
+
+  const isSpecialPage = location.pathname === "/special"; // Check if the route is SpecialPage
+
+  return (
+    <>
+      {!isSpecialPage && <Navbar />}
+      {children}
+      {!isSpecialPage && <Contactbar />}
+    </>
   );
 };
 

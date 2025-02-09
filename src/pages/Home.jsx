@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles.css'; 
+
 const Home = () => {
+  
   return (
     <div className="flex flex-col overflow-hidden">
       <div className="flex-grow flex flex-col items-center justify-center mb-10 mt-10">
