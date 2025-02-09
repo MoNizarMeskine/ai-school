@@ -15,7 +15,7 @@ const Home = () => {
         className="flex flex-col gap-10 justify-center mx-auto mb-5 border border-gray-300 p-4 w-full max-w-6xl bg-cover bg-center bg-75 transparent-bg"
       >
         <div className="flex flex-col">
-          <img src="/public/team.png" alt="Teams" className="w-full h-auto mx-auto" />
+          <img src="/squad.jpeg" alt="team" className="w-full h-auto mx-auto" />
         </div>
         <div className="flex flex-col border border-gray-500 p-4 shadow-lg bg-white bg-opacity-50">
           <p className="text-2xl mb-2 font-bold">Overview:</p>
