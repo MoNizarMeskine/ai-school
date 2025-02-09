@@ -72,7 +72,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Link to="/about-me">
+          <Link to="/signup">
           <button className="text-l font-bold uppercase bg-blue-300 text-black px-4 py-2 inline-block rounded transform transition-transform duration-200 hover:scale-105">
           Sign up!
             </button>
