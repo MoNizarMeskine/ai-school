@@ -4,14 +4,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist', // Default build directory
+    outDir: 'dist', 
   },
   server: {
-    port: 3000, // Local dev server port
+    port: 3000,
   },
   resolve: {
     alias: {
-      '@': '/src', // Optional: Adjust if needed
+      '@': '/src', 
     },
   },
 });
