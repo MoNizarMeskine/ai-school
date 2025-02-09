@@ -7,7 +7,6 @@ const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [reply, setReply] = useState("");
 
-  // Extract the subject from the query string
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     setSubject(params.get("subject") || "General");

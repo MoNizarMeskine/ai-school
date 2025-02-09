@@ -30,10 +30,9 @@ const App = () => {
 };
 
 const Layout = ({ children }) => {
-  const location = useLocation(); // Get the current route
+  const location = useLocation(); 
 
   const isExcludedPage = ["/special", "/chatbot"].includes(location.pathname); 
-  // Exclude Navbar & Contactbar from SpecialPage and Chatbot
 
   return (
     <>
